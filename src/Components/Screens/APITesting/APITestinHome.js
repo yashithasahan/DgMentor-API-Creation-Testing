@@ -12,14 +12,14 @@ const ApiTest = styled.div`
 `;
 
 const APITestinHome = () => {
-  const [userApi, setUserApi] = useState("login");
+  const [userApi, setUserApi] = useState("getAllcourses");
 
   const apiSelector = (api) => {
     setUserApi(api);
   };
   return (
     <ApiTest>
-      <h1>DgMentor API Testing</h1>
+      <h1>DgMentor API Testing (Courses)</h1>
       <APITestingMenu onChange={apiSelector} />
       <APItesting selectedApi={userApi}></APItesting>
     </ApiTest>

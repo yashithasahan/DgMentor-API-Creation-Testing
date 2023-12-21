@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import LoginAPI from "./APIForms/loginAPI";
 import RegisterAPI from "./APIForms/RegisterAPI";
+import GetAllCourse from "./APIForms/GetAllCourse";
 import { useState } from "react";
+import CreateCourse from "./APIForms/CreateACourse";
 
 const FormCard = styled.div`
   padding: 30px 30px 60px 30px;
@@ -66,8 +68,9 @@ const APItesting = (props) => {
         <LoginAPI handleInput={setIsInputValid} isValid={isInputValid} />
       )}
       {props.selectedApi === "register" && <RegisterAPI />}
-      {props.selectedApi !== "register" && props.selectedApi !== "login" && (
-        <p>API Development ongoing...</p>
+      {props.selectedApi === "getAllcourses" && <GetAllCourse />}
+      {props.selectedApi === "courseCreation" && (
+        <CreateCourse handleInput={setIsInputValid} isValid={isInputValid} />
       )}
     </FormCard>
   );

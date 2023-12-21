@@ -18,7 +18,7 @@ const Form = styled.form`
   }
 `;
 
-const LoginAPI = (props) => {
+const CreateCourse = (props) => {
   // const { signup, error, isLoading } = useSignup();
   const [input, setInput] = useState({
     email: "",
@@ -65,16 +65,16 @@ const LoginAPI = (props) => {
   const passwordRef = useRef();
   return (
     <Form isValid={props.isValid} onSubmit={handleOnSubmit}>
-      <h3>Login</h3>{" "}
+      <h3>Create A course</h3>{" "}
       <div className="input-field">
-        <label>Username</label>
+        <label>Title</label>
         <input ref={emailRef} type="text"></input>
       </div>
       <div className="input-field">
-        <label>Password</label>
+        <label>Name</label>
         <input ref={passwordRef} type="password"></input>
       </div>
-      <Button type="submit">Login</Button>
+      <Button type="submit">Create</Button>
       <h4>Some fields are empty ! </h4>
       {/* {error && (
         <div className="error">
@@ -85,4 +85,4 @@ const LoginAPI = (props) => {
     </Form>
   );
 };
-export default LoginAPI;
+export default CreateCourse;

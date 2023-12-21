@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Button from "../../UI/Button";
-import { useState } from "react";
+// import { useState } from "react";
 
 const ApiMenu = styled.div`
   display: flex;
@@ -12,18 +12,22 @@ const ApiMenu = styled.div`
 `;
 
 const apis = [
-  "login",
-  "register",
-  "userCreation",
-  "userDelete",
+  // "login x",
+  // "register x",
+  // "userCreation x",
+  // "userDelete x",
+  "getAllcourses",
   "courseCreation",
+  "getSingleCourse",
+
   "courseUpdate",
-  "courseDelte",
+  "courseDelete",
 ];
 
 const APITestingMenu = (props) => {
   const changeApiHandler = (api) => {
     console.log("clciked");
+    console.log(api)
     props.onChange(api);
   };
   return (
